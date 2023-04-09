@@ -1,21 +1,25 @@
 [
     {
         "name": "Account & Finance",
+        "id" : "1",
         "img": "https://cdn-icons-png.flaticon.com/512/49/49709.png?w=826&t=st=1681070952~exp=1681071552~hmac=a7a5b1a07f266e6f3a942a697062d73151676d50f2fb2f717e540771290773b1",
         "available_jobs": "300 Jobs Available"
     },
     {
         "name": "Creative Design",
+        "id" : "2",
         "img": "https://cdn-icons-png.flaticon.com/512/849/849871.png?w=826&t=st=1681071007~exp=1681071607~hmac=c7ef32d1c115d0083a776d3884a6a0f9cd0b384dd917c2f7d91e748f8d40cd7c",
         "available_jobs": "100+ Jobs Available"
     },
     {
         "name": "Marketing & Sales",
+        "id" : "3",
         "img": "https://cdn-icons-png.flaticon.com/512/228/228161.png?w=826&t=st=1681071038~exp=1681071638~hmac=14acf6e92f3cfbb7e75ddfc39cf07e835546b94714caa2dd2328acdbe3f5055f",
         "available_jobs": "150 Jobs Available"
     },
     {
         "name": "Engineering Job",
+        "id" : "4",
         "img": "https://img.freepik.com/free-icon/dollar-price-tag_318-10083.jpg?w=826&t=st=1681071077~exp=1681071677~hmac=719a6f47a4a1757b69f37ca9876f0bc5a14aa77181ebfbdc3a725f7f2f0acac0",
         "available_jobs": "224 Jobs Available"
     }
