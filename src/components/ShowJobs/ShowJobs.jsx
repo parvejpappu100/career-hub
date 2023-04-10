@@ -5,8 +5,8 @@ import {  MapPinIcon , CurrencyDollarIcon} from '@heroicons/react/24/solid'
 const ShowJobs = ({job}) => {
     const {img , post , company , job_type , location , office_add , salary} = job;
     return (
-        <div className='border border-gray-100 rounded-xl shadow bg-sky-50 p-3 flex items-center gap-5'>
-            <img className='w-2/4' src={img} alt="" />
+        <div className='border border-gray-100 rounded-xl shadow bg-sky-50 p-3 flex flex-col lg:flex-row items-center gap-5'>
+            <img className='w-96' src={img} alt="" />
             <div>
             <h6 className='text-2xl font-medium my-2'>{post}</h6>
             <h6 className='text-xl my-2'>{company}</h6>
