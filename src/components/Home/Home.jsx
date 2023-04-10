@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
 import JobCategory from '../JobCategory/JobCategory';
+import ShowJobs from '../ShowJobs/ShowJobs';
 
 const Home = () => {
-    const jobs = useLoaderData();
+    const [jobs , setJobs] = useState([]);
+    useEffect( () => {
+        fetch("jobs.json")
+        .then(res => res.json())
+        .then(data => setJobs(data))
+    } , [])
+
+    const jobsCategory = useLoaderData();
     return (
         <div>
             <div>
@@ -22,15 +30,27 @@ const Home = () => {
                 </Banner>
             </div>
             <div className='lg:container mx-auto'>
-                <h3 className='text-3xl text-center mt-5 font-bold'>Job Category List</h3>
+                <h3 className='text-3xl text-center mt-16 font-bold'>Job Category List</h3>
                 <p className=' text-center my-2'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className='grid grid-cols-2 md:grid-cols-4 p-2 gap-5 my-5'>
                     {
-                        jobs.map(job => <JobCategory
+                        jobsCategory.map(job => <JobCategory
                         key={job.id}
                         job={job}
                         ></JobCategory>)
                     }
+                </div>
+                <div>
+                    <h3 className='text-3xl text-center mt-28 font-bold'>Featured Jobs</h3>
+                    <p className=' text-center my-2'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <div className='grid grid-cols-2 my-10 gap-5 '>
+                        {
+                            jobs.map(job => <ShowJobs
+                            key={job.id}
+                            job={job}
+                            ></ShowJobs>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

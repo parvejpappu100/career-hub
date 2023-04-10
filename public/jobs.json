@@ -1,26 +1,105 @@
 [
-    {
-        "name": "Account & Finance",
-        "id" : "1",
-        "img": "https://cdn-icons-png.flaticon.com/512/49/49709.png?w=826&t=st=1681070952~exp=1681071552~hmac=a7a5b1a07f266e6f3a942a697062d73151676d50f2fb2f717e540771290773b1",
-        "available_jobs": "300 Jobs Available"
-    },
-    {
-        "name": "Creative Design",
-        "id" : "2",
-        "img": "https://cdn-icons-png.flaticon.com/512/849/849871.png?w=826&t=st=1681071007~exp=1681071607~hmac=c7ef32d1c115d0083a776d3884a6a0f9cd0b384dd917c2f7d91e748f8d40cd7c",
-        "available_jobs": "100+ Jobs Available"
-    },
-    {
-        "name": "Marketing & Sales",
-        "id" : "3",
-        "img": "https://cdn-icons-png.flaticon.com/512/228/228161.png?w=826&t=st=1681071038~exp=1681071638~hmac=14acf6e92f3cfbb7e75ddfc39cf07e835546b94714caa2dd2328acdbe3f5055f",
-        "available_jobs": "150 Jobs Available"
-    },
-    {
-        "name": "Engineering Job",
-        "id" : "4",
-        "img": "https://img.freepik.com/free-icon/dollar-price-tag_318-10083.jpg?w=826&t=st=1681071077~exp=1681071677~hmac=719a6f47a4a1757b69f37ca9876f0bc5a14aa77181ebfbdc3a725f7f2f0acac0",
-        "available_jobs": "224 Jobs Available"
-    }
+  {
+    "img": "https://img.freepik.com/free-vector/gradient-mechanical-repair-logo-template_23-2149999405.jpg?w=826&t=st=1681116165~exp=1681116765~hmac=90ce40312978990ac0aeb6daaba55c492f6a6d16a4d95e66d29b636afd83e66d",
+    "id": "1",
+    "post": "Data Scientist",
+    "company": "Tesla, Inc.",
+    "job_type": "Full Time",
+    "location": "Remote",
+    "office_add": "Dhaka, Bangladesh",
+    "salary": "120k - 150k",
+    "job_description": "We are looking for a data scientist to join our team and help us analyze large and complex datasets to drive business decisions and improve our products. As a data scientist, you will work closely with cross-functional teams to design and execute experiments, develop predictive models, and communicate insights to stakeholders.",
+    "job_res": "A Bachelor's or Master's degree in Computer Science, Statistics, or a related field. Strong programming skills in Python and experience with data analysis and visualization tools such as Pandas, NumPy, and Tableau. Experience with machine learning algorithms and techniques. Excellent communication and collaboration skills.",
+    "educational_req": "Bachelor's or Master's degree in Computer Science, Statistics, or a related field",
+    "experience": "3+ years of experience in data science",
+    "phone": "01830-00 00 00",
+    "email": "careers@tesla.com",
+    "address": "45500 Fremont Blvd, Fremont, CA 94538"
+  },
+
+  {
+    "img": "https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg?w=826&t=st=1681116093~exp=1681116693~hmac=d3fbac4676d49c46d4ae74e17598e7642cfc73fe1617149bb5819dff09bd759a",
+    "id": "2",
+    "post": "Software Engineer",
+    "company": "Google LLC",
+    "job_type": "Full Time",
+    "location": "Remote",
+    "office_add": "Dhaka, Bangladesh",
+    "salary": "70k - 90k",
+    "job_description": "We are looking for a talented software engineer to join our team and help us develop cutting-edge applications for our customers. As a software engineer, you will be responsible for designing, coding, testing, and deploying software solutions that meet the needs of our clients.",
+    "job_res": "A Bachelor's degree in Computer Science, Software Engineering or a related field. Strong programming skills in one or more of the following languages: Java, Python, C++, or Ruby. Experience working in an Agile development environment. Excellent communication and teamwork skills.",
+    "educational_req": "Bachelor's degree in Computer Science, Software Engineering or a related field",
+    "experience": "2-3 Years in this field.",
+    "phone": "01750-00 00 00",
+    "email": "info@gmail.com",
+    "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/512/732/732228.png?w=826&t=st=1681116221~exp=1681116821~hmac=91773771740dc15dfd4697fa7839eb454fa2338ccabf333899f1048d73076504",
+    "id": "3",
+    "post": "Data Scientist",
+    "company": "Netflix",
+    "job_type": "Part Time",
+    "location": "Onside",
+    "office_add": "London, England",
+    "salary": "90k - 120k",
+    "job_description": "We are seeking a data scientist to join our team and help us analyze large datasets to drive insights that inform our content and product decisions. As a data scientist, you will work closely with cross-functional teams to develop and implement data-driven solutions to business problems.",
+    "job_res": "A Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or a related field. Strong programming skills in Python, R, or another statistical programming language. Experience with data visualization tools such as Tableau or Power BI. Excellent communication and collaboration skills.",
+    "educational_req": "Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or a related field",
+    "experience": "3-5 years of experience in data science",
+    "phone": "01800-00 00 00",
+    "email": "jobs@netflix.com",
+    "address": "100 Winchester Circle, Los Gatos, CA 95032"
+  },
+  {
+    "img": "https://img.freepik.com/premium-vector/future-font-creative-modern-letter-mark-vector-logo_611044-2.jpg?w=826",
+    "id": "4",
+    "post": "Software Development Engineer",
+    "company": "Amazon Web Services (AWS)",
+    "job_type": "Full Time",
+    "location": "Onside",
+    "office_add": "Dhaka, Bangladesh",
+    "salary": "100k - 130k",
+    "job_description": "We are looking for a talented software development engineer to join our team and help us build and scale our cloud computing services. As a software development engineer, you will be responsible for designing, coding, testing, and deploying software solutions that meet the needs of our customers.",
+    "job_res": "A Bachelor's or Master's degree in Computer Science, Software Engineering, or a related field. Strong programming skills in one or more of the following languages: Java, Python, or C++. Experience with distributed computing technologies such as Hadoop, Spark, or Kubernetes. Excellent communication and problem-solving skills.",
+    "educational_req": "Bachelor's or Master's degree in Computer Science, Software Engineering, or a related field",
+    "experience": "3+ years of experience in software development",
+    "phone": "01670-00 00 00",
+    "email": "careers@aws.com",
+    "address": "410 Terry Ave N, Seattle, WA 98109"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/512/732/732221.png?w=826&t=st=1681116300~exp=1681116900~hmac=f531c70441a89fd09b785f693ce3539028b7775ddba12d7434cb9aa8ac325906",
+    "id": "5",
+    "post": "Product Manager",
+    "company": "Microsoft Corporation",
+    "job_type": "Full Time",
+    "location": "Remote",
+    "office_add": "Dhaka, Bangladesh",
+    "salary": "130k - 160k",
+    "job_description": "We are looking for a product manager to join our team and help us develop and launch innovative products and services. As a product manager, you will work closely with cross-functional teams to identify market opportunities, define product features, and drive product development from concept to launch.",
+    "job_res": "A Bachelor's or Master's degree in Business Administration, Computer Science, or a related field. Strong analytical and strategic thinking skills. Experience with Agile development methodologies. Excellent communication and collaboration skills.",
+    "educational_req": "Bachelor's or Master's degree in Business Administration, Computer Science, or a related field",
+    "experience": "5+ years of experience in product management",
+    "phone": "01710-00 00 00",
+    "email": "careers@microsoft.com",
+    "address": "One Microsoft Way, Redmond, WA 98052"
+  },
+  {
+    "img": "https://img.freepik.com/free-psd/glowing-facebook-logo-realistic-3d-circle_125540-2097.jpg?w=1060&t=st=1681116331~exp=1681116931~hmac=8e3f50b11a3ee4bc6736a12cf6ef3e8a0278763ee9959a8f9d4365f842d04027",
+    "id": "6",
+    "post": "Marketing Manager",
+    "company": "Facebook, Inc.",
+    "job_type": "Full Time",
+    "location": "Remote",
+    "office_add": "Dhaka, Bangladesh",
+    "salary": "140k - 180k",
+    "job_description": "We are seeking a marketing manager to join our team and help us develop and execute global marketing campaigns that drive user acquisition and engagement. As a marketing manager, you will work closely with cross-functional teams to identify marketing opportunities, develop messaging and creative assets, and measure campaign effectiveness.",
+    "job_res": "A Bachelor's or Master's degree in Marketing, Business Administration, or a related field. Strong strategic thinking and analytical skills. Experience with digital marketing channels such as Facebook, Instagram, and Google Ads. Excellent communication and collaboration skills.",
+    "educational_req": "Bachelor's or Master's degree in Marketing, Business Administration, or a related field",
+    "experience": "7+ years of experience in marketing",
+    "phone": "01920-00 00 00",
+    "email": "jobs@facebook.com",
+    "address": "1 Hacker Way, Menlo Park, CA 94025"
+  }
 ]
