@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Banner from '../Banner/Banner';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, json, useLoaderData, useParams } from 'react-router-dom';
 import {  CurrencyDollarIcon , CalendarIcon , MapPinIcon, PhoneIcon , EnvelopeIcon} from '@heroicons/react/24/solid'
 import './JobDetails.css'
 
@@ -51,7 +51,9 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
+                        <Link to= {`/jobs/${id.id}`}>
+                            <button className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>

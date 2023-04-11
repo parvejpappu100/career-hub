@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
+import { useLoaderData, useParams } from 'react-router-dom';
+import ShowAppliedJobs from '../ShowAppliedJobs/ShowAppliedJobs';
 
 const AppliedJobs = () => {
+    const id = useParams();
+    console.log(id)
+    const jobs = useLoaderData();
+    
+    const appliedJob = jobs.filter(job => job.id == id.id);
+
+    
     return (
         <div>
             <div>
@@ -9,7 +18,14 @@ const AppliedJobs = () => {
                     <h4 className='text-center py-32 text-3xl font-bold'>Applied Jobs</h4>
                 </Banner>
             </div>
-            <h1>This is applied jobs page</h1>
+            <div className='lg:container mx-auto my-10'>
+                {
+                    appliedJob.map(job => <ShowAppliedJobs
+                    key={job.id}
+                    job = {job}
+                    ></ShowAppliedJobs>)
+                }
+            </div>
         </div>
     );
 };
