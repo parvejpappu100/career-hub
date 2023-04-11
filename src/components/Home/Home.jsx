@@ -5,19 +5,19 @@ import JobCategory from '../JobCategory/JobCategory';
 import ShowJobs from '../ShowJobs/ShowJobs';
 
 const Home = () => {
-    const [jobs , setJobs] = useState([]);
+    const [jobsCategory , setJobsCategory] = useState([]);
     useEffect( () => {
-        fetch("jobs.json")
+        fetch("/jobsCategory.json")
         .then(res => res.json())
-        .then(data => setJobs(data))
+        .then(data => setJobsCategory(data))
     } , [])
 
     const [showAll , setShowAll] = useState(false);
     const handleShowAll = () => {
         setShowAll(true);
     }
-
-    const jobsCategory = useLoaderData();
+    
+    const jobs = useLoaderData();
     return (
         <div>
             <div>

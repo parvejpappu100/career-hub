@@ -1,12 +1,13 @@
 import React from 'react';
 import './ShowJobs.css'
 import {  MapPinIcon , CurrencyDollarIcon} from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
-const ShowJobs = ({job}) => {
+const ShowJobs = ({job }) => {
     const {img , post , company , job_type , location , office_add , salary} = job;
     return (
         <div className='border border-gray-100 rounded-xl shadow bg-sky-50 p-3 flex flex-col lg:flex-row items-center gap-5'>
-            <img className='w-96' src={img} alt="" />
+            <img className=' w-96 lg:w-2/5' src={img} alt="" />
             <div>
             <h6 className='text-2xl font-medium my-2'>{post}</h6>
             <h6 className='text-xl my-2'>{company}</h6>
@@ -24,7 +25,11 @@ const ShowJobs = ({job}) => {
                     <h6>Salary : {salary}</h6>
                 </div>
             </div>
-            <button className='btn-job-primary p-3 my-5 text-white rounded font-semibold'>View Details</button>
+            <Link to={`/details/${job.id}`}>
+                <button  className='btn-job-primary p-3 my-5 text-white rounded font-semibold'>
+                    View Details
+                </button>
+            </Link>
             </div>
         </div>
     );
