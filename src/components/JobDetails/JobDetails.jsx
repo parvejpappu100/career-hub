@@ -29,7 +29,7 @@ const JobDetails = () => {
         setJob(savedJob);
     } , [jobs])
 
-    const hanldeStoredJob = (details) =>{
+    const handleStoredJob = (details) =>{
         const newJob = [...job , details];
         setJob(newJob);
         addToDb(details.id)
@@ -80,7 +80,7 @@ const JobDetails = () => {
                     </div>
                     <div>
                         <Link to= "/jobs">
-                            <button onClick={() => hanldeStoredJob(details)} className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
+                            <button onClick={() => handleStoredJob(details)} className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
                         </Link>
                     </div>
                 </div>
