@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
-import { Link, json, useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import {  CurrencyDollarIcon , CalendarIcon , MapPinIcon, PhoneIcon , EnvelopeIcon} from '@heroicons/react/24/solid'
 import './JobDetails.css'
+import { addToDb, getShoppingCart } from '../../utilities/fakeDb';
+import AppliedJobs from '../AppliedJobs/AppliedJobs';
 
 const JobDetails = () => {
     const id = useParams();
     const jobs = useLoaderData();
     const details = jobs.find(detail => detail.id == id.id );
+
+    const [job , setJob] = useState([]);
+    console.log(job)
+
+
+    useEffect( () => {
+        const storedJob = getShoppingCart();
+        const savedJob = [];
+        for (const id in storedJob){
+            const appliedJob = jobs.find(job => job.id == id);
+            if(appliedJob){
+                const quantity = storedJob[id];
+                appliedJob.quantity = quantity;
+                savedJob.push(appliedJob)
+
+            }
+        }
+        setJob(savedJob);
+    } , [jobs])
+
+    const hanldeStoredJob = (details) =>{
+        const newJob = [...job , details];
+        setJob(newJob);
+        addToDb(details.id)
+    }
+
+
     const {job_description , job_res , educational_req , experience ,salary , post , address , phone , email } = details;
     return (
         <div>
@@ -52,7 +81,7 @@ const JobDetails = () => {
                     </div>
                     <div>
                         <Link to= {`/jobs/${id.id}`}>
-                            <button className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
+                            <button onClick={() => hanldeStoredJob(details)} className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
                         </Link>
                     </div>
                 </div>

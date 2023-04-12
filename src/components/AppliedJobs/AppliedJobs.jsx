@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import { useLoaderData, useParams } from 'react-router-dom';
 import ShowAppliedJobs from '../ShowAppliedJobs/ShowAppliedJobs';
+import { getShoppingCart } from '../../utilities/fakeDb';
 
 const AppliedJobs = () => {
     const id = useParams();
-    console.log(id)
     const jobs = useLoaderData();
+    
     
     const appliedJob = jobs.filter(job => job.id == id.id);
 
