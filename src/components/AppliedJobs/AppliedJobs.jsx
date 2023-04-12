@@ -8,8 +8,11 @@ const AppliedJobs = () => {
     const jobs = useLoaderData();
 
     const appliedJob = getShoppingCart();
-    let savedJob = [];
-    
+    const savedJob = [];
+
+    const [showJob , setShowJob] = useState(savedJob)
+    // const [filteredJob  , setFilterJob] = useState([]);
+
     for (const id in appliedJob){
         const savedJobs = jobs.find( product => product.id === id);
         if (savedJobs){
@@ -19,7 +22,17 @@ const AppliedJobs = () => {
         }
     }
 
-   
+    const handleFilterRemoteJob = () =>{
+        const appliedJob = savedJob.filter(aJob => aJob.location == "Remote");
+        setShowJob(appliedJob);
+    }
+
+    const handleFilterOnsideJob = () =>{
+        const appliedJob = savedJob.filter(aJob => aJob.location == "Onside");
+        setShowJob(appliedJob);
+    }
+
+
     return (
         <div>
             <div>
@@ -32,17 +45,19 @@ const AppliedJobs = () => {
                 <div className="dropdown dropdown-hover">
                     <label tabIndex={0} className="btn m-1">Filter By</label>
                         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><button>Remote</button></li>
-                            <li><button>Onside</button></li>
+                            <li><button onClick={handleFilterRemoteJob}>Remote</button></li>
+                            <li><button onClick={handleFilterOnsideJob}>Onside</button></li>
                         </ul>
                     </div>
                 </div>
-                {
-                    savedJob.map(job => <ShowAppliedJobs
-                    key={job.id}
-                    job = {job}
-                    ></ShowAppliedJobs>)
-                }
+                <div>
+                    {
+                        showJob.map(job => <ShowAppliedJobs
+                        key={job.id}
+                        job = {job}
+                        ></ShowAppliedJobs>)
+                    }
+                </div>
             </div>
         </div>
     );
