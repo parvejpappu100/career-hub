@@ -12,7 +12,6 @@ const JobDetails = () => {
     const details = jobs.find(detail => detail.id == id.id );
 
     const [job , setJob] = useState([]);
-    console.log(job)
 
 
     useEffect( () => {
