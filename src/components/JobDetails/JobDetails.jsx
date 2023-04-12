@@ -79,7 +79,7 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <Link to= {`/jobs/${id.id}`}>
+                        <Link to= "/jobs">
                             <button onClick={() => hanldeStoredJob(details)} className="btn btn-job-primary text-white font-semibold w-full mt-4">Apply Now</button>
                         </Link>
                     </div>

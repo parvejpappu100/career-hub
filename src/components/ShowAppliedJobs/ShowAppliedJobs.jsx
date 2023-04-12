@@ -13,7 +13,7 @@ const ShowAppliedJobs = ({ job }) => {
   const { img, post, company, job_type, location, office_add, salary } = job;
   return (
     <div>
-      <div className="border border-gray-100 rounded-xl shadow bg-sky-50 flex flex-col lg:flex-row lg:items-center justify-between ">
+      <div className="border border-gray-100 rounded-xl shadow bg-sky-50 flex flex-col lg:flex-row lg:items-center justify-between my-5 ">
         <div className=" p-3 flex flex-col lg:flex-row lg:items-center gap-5">
           <img className=" w-64 h-64" src={img} alt="" />
           <div>

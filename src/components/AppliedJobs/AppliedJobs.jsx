@@ -5,13 +5,20 @@ import ShowAppliedJobs from '../ShowAppliedJobs/ShowAppliedJobs';
 import { getShoppingCart } from '../../utilities/fakeDb';
 
 const AppliedJobs = () => {
-    const id = useParams();
     const jobs = useLoaderData();
-    
-    
-    const appliedJob = jobs.filter(job => job.id == id.id);
 
+    const storedCart = getShoppingCart();
+    const savedCart = [];
     
+    for (const id in storedCart){
+        const addedProducts = jobs.find( product => product.id === id);
+        if (addedProducts){
+            const quantity = storedCart[id];
+            addedProducts.quantity = quantity;
+            savedCart.push(addedProducts)
+        }
+    }
+
     return (
         <div>
             <div>
@@ -21,7 +28,7 @@ const AppliedJobs = () => {
             </div>
             <div className='lg:container mx-auto my-10'>
                 {
-                    appliedJob.map(job => <ShowAppliedJobs
+                    savedCart.map(job => <ShowAppliedJobs
                     key={job.id}
                     job = {job}
                     ></ShowAppliedJobs>)
